@@ -6,7 +6,7 @@ pipeline {
 
     environment {
         APP_NAME       = 'php-app-container'
-        IMAGE_NAME     = 'php-app:latest'
+        IMAGE_NAME     = 'php-app:build-${BUILD_NUMBER}'
         TEST_CONTAINER = 'php-app-test'
         TEST_PORT      = '8001'
         APP_PORT       = '8000'
