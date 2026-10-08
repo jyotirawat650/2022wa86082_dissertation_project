@@ -34,7 +34,7 @@ pipeline {
                     sleep 5
                     HEALTHY=false
                     for i in 1 2 3 4 5 6 7 8 9 10; do
-                        if curl -sf http://${DOCKER_HOST_IP}:${TEST_PORT}/ > /dev/null; then
+                        if curl -sf http://${DOCKER_HOST_IP}:${TEST_PORT}/health.php > /dev/null; then
                             echo "Health check PASSED on attempt $i"
                             HEALTHY=true
                             break
