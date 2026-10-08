@@ -5,12 +5,12 @@ pipeline {
     triggers { pollSCM('H/2 * * * *') }
 
     environment {
-        APP_NAME       = 'php-app-container'
-        IMAGE_NAME     = 'php-app:build-${env.BUILD_NUMBER}'
-        TEST_CONTAINER = 'php-app-test'
-        TEST_PORT      = '8001'
-        APP_PORT       = '8000'
-        DOCKER_HOST_IP = 'host.docker.internal'
+    	APP_NAME       = 'php-app-container'
+    	IMAGE_NAME     = 'php-app'
+    	TEST_CONTAINER = 'php-app-test'
+    	TEST_PORT      = '8001'
+    	APP_PORT       = '8000'
+    	DOCKER_HOST_IP = 'host.docker.internal'
     }
 
     stages {
