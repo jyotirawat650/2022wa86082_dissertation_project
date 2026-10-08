@@ -56,7 +56,7 @@ pipeline {
                 sh '''
                     docker rm -f ${TEST_CONTAINER} 2>/dev/null || true
                     docker rm -f ${APP_NAME} 2>/dev/null || true
-                    docker run -d --name ${APP_NAME} -p ${APP_PORT}:80 ${IMAGE_NAME}
+                    docker run -d --name ${APP_NAME} -p ${APP_PORT}:80 ${IMAGE_NAME}:build-${BUILD_NUMBER}
                     echo "Deployed on http://localhost:${APP_PORT}"
                 '''
             }
