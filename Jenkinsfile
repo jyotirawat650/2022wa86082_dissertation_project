@@ -23,7 +23,7 @@ pipeline {
         }
 
         stage('Run Tests') {
-            steps { sh 'docker run --rm ${IMAGE_NAME} php /var/www/tests/run_tests.php' }
+            steps { sh 'docker run --rm ${IMAGE_NAME}:build-${BUILD_NUMBER} php /var/www/tests/run_tests.php'}
         }
 
         stage('Health Check - New Container') {
