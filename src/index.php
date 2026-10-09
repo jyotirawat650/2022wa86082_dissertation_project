@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/Calculator.php';
 $calc = new Calculator();
-$version = "1.0.0";
+$version = "1.1.0";
 ?>
 <!doctype html>
 <html>
